@@ -1,6 +1,10 @@
 package Exercise2_0;
 // ctr shift alt l    reformat everything
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Exercises {
 
     // 1 and 2   String is the parameter
@@ -91,7 +95,7 @@ public class Exercises {
         System.out.println();
     }
 
-    int[] arrays2  = new int[10];
+    int[] arrays2 = new int[10];
     // Create a for loop that populates an integer array with values, outputting them at
     //each iteration. Then create another loop that iterates through the array, changing
     // the values at each point to equal itself times 10, outputting them at each iteration.
@@ -102,7 +106,7 @@ public class Exercises {
             System.out.print(t + " ");
         }
         System.out.println();  // make new line
-        for(int t = 0; t < arrays2.length; t++){
+        for (int t = 0; t < arrays2.length; t++) {
             System.out.print(arrays2[t] * 10 + " "); // print out arrays x10
         }
         System.out.println(); // make new line
@@ -111,26 +115,74 @@ public class Exercises {
 
     public int Blackjack(int cardTotal1, int cardTotal2) {
 
-        if (cardTotal1 <= 21 && cardTotal2 <= 21){ // if carTotal 1 is less than or equal to 21 and and cardTotal2 also is
-            if (cardTotal1 > cardTotal2){ // check what one is greater
+        if (cardTotal1 <= 21 && cardTotal2 <= 21) { // if carTotal 1 is less than or equal to 21 and and cardTotal2 also is
+            if (cardTotal1 > cardTotal2) { // check what one is greater
                 return cardTotal1; // return variable
-            }
-            else // or
+            } else // or
             {
                 return cardTotal2; // return variable
             }
-        }
-        else if (cardTotal1 <= 21 && cardTotal2 > 21) //if cardTotal 1 is less than 21 and cardTotal2 is over 21
+        } else if (cardTotal1 <= 21 && cardTotal2 > 21) //if cardTotal 1 is less than 21 and cardTotal2 is over 21
         {
             return cardTotal1; //return value
-        }
-        else if (cardTotal2 <= 21 && cardTotal1 > 21){ //if cardTotal 2 is less than 21 and cardTotal1 is over 21 (&& check if both conditions are true)
+        } else if (cardTotal2 <= 21 && cardTotal1 > 21) { //if cardTotal 2 is less than 21 and cardTotal1 is over 21 (&& check if both conditions are true)
             return cardTotal2;
-        }
-        else{ //because all options are covered if both are over 21 do this
+        } else { //because all options are covered if both are over 21 do this
             return 0;
         }
     }
-}
+
+    public int uniqueSum(int sumNum1, int sumNum2, int sumNum3) {
+
+        // KEEP IT SOMPLE
+
+        if (sumNum1 == sumNum2) { // check
+            return sumNum3;
+        }
+        if (sumNum2 == sumNum3) {
+            return sumNum1;
+        }
+        if (sumNum3 == sumNum1) {
+            return sumNum2;
+        } else {
+            return sumNum1 + sumNum2 + sumNum3;
+        }
+
+
+        // Given 3 integer values, return their sum. If one value is the same as another value,
+        //       they do not count towards the sum. Aka only return the sum of unique numbers
+        // given.
+    }
+
+    public boolean tooHot(int temperature, boolean isSummer) {
+
+        if (isSummer == true) {
+            if (temperature < 100 && temperature > 60) {
+            }
+            if (isSummer == false) {
+                if (temperature < 90 && temperature > 60) {
+
+                    return false;
+                }
+
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

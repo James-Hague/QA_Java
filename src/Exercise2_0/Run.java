@@ -49,6 +49,20 @@ public class Run {
 		System.out.println("Highest Value: " + t);
 
 
+		// unique sum
+
+		// call method here and add ints
+		int a = exerciseVariable.uniqueSum(23, 42, 89);
+		System.out.print("result  " + a);
+		a = exerciseVariable.uniqueSum(23, 45, 23);
+		System.out.print("result  " + a);
+
+
+
+		// IS HOTT
+
+		boolean c = exerciseVariable.tooHot(75, true);
+		System.out.print("IT SSUMMER" + c);
 
 	
 	}
